@@ -31,7 +31,7 @@ Unlike traditional rule-based or Excel-driven forecasting, this model learns non
   - Categorical: `industry`, `region`, `company_size`
   - Time-based: `customer_tenure`, `date`
 
-📁 File: `synthetic_financial_data_realistic.csv`
+📁 File: `synthetic_financial_data_bukharii.csv`
 
 ---
 
