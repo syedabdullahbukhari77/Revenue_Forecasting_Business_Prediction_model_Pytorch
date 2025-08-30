@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Business KPI Prediction from Financial Data (PyTorch)"
+authors:
+  - family-names: "Bukhari"
+    given-names: "Syed Abdullah"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+version: "0.1.0"
+date-released: 2025-08-30
+url: "https://github.com/abdullahbukharii/Revenue_Forecasting_Business_Prediction_model_Pytorch"
