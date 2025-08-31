@@ -54,6 +54,7 @@ if __name__ == "__main__":
     X_train, X_val, y_train, y_val, scaler, encoders = load_and_preprocess(
         "synthetic_financial_data_bukharii.csv"
     )
+    # joblib code
     joblib.dump(scaler, "models/scaler.pkl")
     joblib.dump(encoders, "models/encoders.pkl")
     print("Scaler and encoders saved.")
