@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-class finance_model(nn.Module):   # staying lowercase since you chose that
+class finance_model(nn.Module):   
     def __init__(self, input_dim: int):
         super(finance_model, self).__init__()
         self.shared = nn.Sequential(
