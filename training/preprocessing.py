@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
+import joblib
 
 def load_and_preprocess(path: str, training: bool = True, scaler: StandardScaler = None, encoders: dict = None):
     """
@@ -53,4 +54,6 @@ if __name__ == "__main__":
     X_train, X_val, y_train, y_val, scaler, encoders = load_and_preprocess(
         "synthetic_financial_data_bukharii.csv"
     )
+    joblib.dump(scaler, "models/scaler.pkl")
+    joblib.dump(encoders, "models/encoders.pkl")
     print("Scaler and encoders saved.")
