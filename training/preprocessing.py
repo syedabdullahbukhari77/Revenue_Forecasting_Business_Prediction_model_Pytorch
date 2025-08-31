@@ -19,7 +19,7 @@ def load_and_preprocess(path: str, training: bool = True, scaler: StandardScaler
     X = df[features].copy()
     y = df[target_cols] if training else None
 
-    # Encode categoricals
+    # Encode (Label Encoding) categoricals
     if training:
         encoders = {}
         for col in X.select_dtypes(include=['object']).columns:
