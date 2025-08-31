@@ -1,4 +1,3 @@
-# inference/predict.py
 import torch
 import numpy as np
 from models.finance_model import finance_model
