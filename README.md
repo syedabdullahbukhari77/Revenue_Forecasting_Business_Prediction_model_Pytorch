@@ -77,6 +77,6 @@ This project demonstrates how **multi-task learning (MTL)** can serve as a scala
 
 ### Installation
 ```bash
-git clone https://github.com/syedabdullahbukhari77/Revenue_Forecasting_Pytorch_Business_Prediction_model
-cd Revenue_Forecasting_Pytorch_Business_Prediction_model
+git clone https://github.com/syedabdullahbukhari77/Revenue_Forecasting_Business_Prediction_model_Pytorch
+cd Revenue_Forecasting_Business_Prediction_model_Pytorch
 pip install -r requirements.txt
