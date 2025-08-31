@@ -39,4 +39,4 @@ torch.save(model.state_dict(), "models/finance_model.pth")
 joblib.dump(scaler, "models/scaler.pkl")
 joblib.dump(encoders, "models/encoders.pkl")
 
-print("✅ Training complete. Model & preprocessing saved in /models/")
+print("Training complete. Model & preprocessing saved in /models/")
