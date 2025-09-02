@@ -35,3 +35,27 @@ if uploaded_file:
 
     df = df[FEATURES]
     model, scaler, encoders = load_artifacts()
+
+    for col in df.select_dtypes(include=['object']).columns:
+        if col in encoders:
+            df[col] = encoders[col].transform(df[col])
+        else:
+            st.error(f"No encoder found for {col}")
+            st.stop()
+
+    X = scaler.transform(df)
+    X_tensor = torch.tensor(X, dtype=torch.float32)
+    with torch.no_grad():
+        revenue, risk, churn = model(X_tensor)
+
+    results = pd.DataFrame({
+        "Revenue_Pred": revenue.numpy(),
+        "Risk_Score": risk.numpy(),
+        "Churn_Prob": torch.sigmoid(churn).numpy()
+    })
+
+    st.write("### Predictions")
+    st.dataframe(results.head())
+
+    st.line_chart(results[["Revenue_Pred"]])
+    st.bar_chart(results[["Churn_Prob"]])
