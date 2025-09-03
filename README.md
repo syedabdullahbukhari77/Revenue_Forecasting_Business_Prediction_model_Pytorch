@@ -64,7 +64,7 @@ This ensures **consistency between training and deployment**.
 ## 6. Training Setup
 - **Split:** 2020–2024 → training | 2024–2025 → validation/testing  
 - **Optimizer:** Adam (`lr = 5e-5`)  
-- **Loss:**  
+- **Loss:** MSE(revenue) + MSE(risk) + BCE(churn)
 - **Batch size:** 128  
 - **Epochs:** 100  
 
